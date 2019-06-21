@@ -21,6 +21,11 @@ public class Froilanda extends Person implements Pilot {
 
     }
 
+    @Override
+    public void ride(Rideable rideable) {
+
+    }
+
     public void ride() {
 
     }

@@ -26,6 +26,11 @@ public class Froilan extends Person implements Farmer {
 
     }
 
+    @Override
+    public void ride(Rideable rideable) {
+
+    }
+
     public void ride() {
 
     }

@@ -32,9 +32,9 @@ public class StableTest {
         Stable stable = new Stable(4);
         Horse horse = stable.getAnimal(0);
         Froilan froilan = new Froilan();
-//        froilan.ride(horse);
+        froilan.ride(horse);
         horse = stable.getAnimal(3);
-//        froilan.ride(horse);
+        froilan.ride(horse);
         Integer expected = 2;
         Integer actual = stable.countRiddenToday();
         Assert.assertEquals(expected,actual);
@@ -45,9 +45,9 @@ public class StableTest {
         Stable stable = new Stable(4);
         Horse horse = stable.getAnimal(0);
         Froilan froilan = new Froilan();
-//        froilan.ride(horse);
+        froilan.ride(horse);
         horse = stable.getAnimal(3);
-//        froilan.ride(horse);
+        froilan.ride(horse);
         stable.setAllRiddenFalse();
         Integer expected = 0;
         Integer actual = stable.countRiddenToday();
