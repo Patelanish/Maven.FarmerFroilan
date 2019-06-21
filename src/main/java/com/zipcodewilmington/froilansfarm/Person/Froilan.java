@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.Person;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Farmer;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.Produce.Crop;
 
 public class Froilan extends Person implements Farmer {
@@ -14,6 +15,14 @@ public class Froilan extends Person implements Farmer {
     }
 
     public void makeNoise() {
+
+    }
+
+    public void mount(Rideable rideable) {
+
+    }
+
+    public void dismount(Rideable rideable) {
 
     }
 
