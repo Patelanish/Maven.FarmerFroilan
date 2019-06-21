@@ -6,5 +6,5 @@ public interface Rider {
     public void dismount(Rideable rideable);
 
 
-    void ride();
+    void ride(Rideable rideable);
 }
