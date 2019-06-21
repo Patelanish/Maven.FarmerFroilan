@@ -8,6 +8,7 @@ import java.util.List;
 
 abstract class AnimalStore<E extends Animal> {
     List<E> animals;
+    static final Integer maxAnimals=4;
 
     AnimalStore(){
         this.animals=new ArrayList<>();

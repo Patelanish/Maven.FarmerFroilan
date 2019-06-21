@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Utility;
 
-public class weeklySchedule {
+public class WeeklySchedule {
 
     public void run(){
 

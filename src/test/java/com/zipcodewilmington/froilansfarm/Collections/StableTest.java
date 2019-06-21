@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.Collections;
 
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import com.zipcodewilmington.froilansfarm.Person.Froilan;
+import com.zipcodewilmington.froilansfarm.Person.Froilanda;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -44,10 +45,10 @@ public class StableTest {
     public void setAllRiddenFalse() {
         Stable stable = new Stable(4);
         Horse horse = stable.getAnimal(0);
-        Froilan froilan = new Froilan();
-        froilan.ride(horse);
+        Froilanda froilanda = new Froilanda();
+        froilanda.ride(horse);
         horse = stable.getAnimal(3);
-        froilan.ride(horse);
+        froilanda.ride(horse);
         stable.setAllRiddenFalse();
         Integer expected = 0;
         Integer actual = stable.countRiddenToday();
