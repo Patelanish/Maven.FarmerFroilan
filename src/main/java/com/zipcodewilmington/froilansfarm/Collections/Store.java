@@ -18,7 +18,7 @@ public class Store<E extends Edible> {
         return edibleCount;
     }
 
-    public Boolean eatEggs(E edibleType, Integer numEaten){
+    public Boolean eat(E edibleType, Integer numEaten){
         if(numEaten<=edibleCount&&edibleType.getClass()==edible.getClass()) {
             edibleCount-=numEaten;
             return true;
