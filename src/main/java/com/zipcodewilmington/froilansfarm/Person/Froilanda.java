@@ -3,9 +3,12 @@ package com.zipcodewilmington.froilansfarm.Person;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Pilot;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
+import com.zipcodewilmington.froilansfarm.Produce.Crop;
+import com.zipcodewilmington.froilansfarm.Produce.CropRow;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 
 public class Froilanda extends Person implements Pilot {
-    public void eat(Edible food) {
+    public void eat(Edible food, Integer qty) {
 
     }
 
@@ -26,7 +29,8 @@ public class Froilanda extends Person implements Pilot {
 
     }
 
-    public void ride() {
+    @Override
+    public void fertilize(CropDuster cd, CropRow<Crop> row) {
 
     }
 }

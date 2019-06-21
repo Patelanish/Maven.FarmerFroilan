@@ -27,7 +27,7 @@ final public class Field {
         return rows;
     }
 
-    public static void addRow(CropRow<Crop> row){
+    public static void addRow(CropRow<? extends Crop> row){
         rows.add(row);
     }
 
