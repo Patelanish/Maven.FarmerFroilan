@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Collections;
 
 import com.zipcodewilmington.froilansfarm.Produce.CornStalk;
+import com.zipcodewilmington.froilansfarm.Produce.Crop;
 import com.zipcodewilmington.froilansfarm.Produce.CropRow;
 import org.junit.Assert;
 import org.junit.Test;
@@ -28,9 +29,10 @@ public class FieldTest {
     @Test
     public void addRow() {
         List<CropRow> rows = Field.getRows();
+        CropRow<? extends Crop> newRow = new CropRow<>();
         Integer initialSize = rows.size();
         Integer expectedSize = initialSize+1;
-        rows.add(new CropRow<CornStalk>());
+        Field.addRow(newRow);
         Integer actualSize=rows.size();
         Assert.assertEquals(expectedSize,actualSize);
     }
@@ -40,7 +42,7 @@ public class FieldTest {
         List<CropRow> rows = Field.getRows();
         Integer initialSize = rows.size();
         Integer expectedSize = initialSize-1;
-        rows.remove(0);
+        Field.removeRow(0);
         Integer actualSize=rows.size();
         Assert.assertEquals(expectedSize,actualSize);
     }

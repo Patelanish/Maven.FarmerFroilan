@@ -6,6 +6,8 @@ import com.zipcodewilmington.froilansfarm.Produce.EarOfCorn;
 import com.zipcodewilmington.froilansfarm.Produce.EdibleEgg;
 import com.zipcodewilmington.froilansfarm.Produce.Potato;
 import com.zipcodewilmington.froilansfarm.Produce.Tomato;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,12 +16,17 @@ final public class Farm {
     final private static Farm INSTANCE = new Farm(15,10);
 
     static FarmHouse farmHouse;
+
     static List<ChickenCoop> coops;
     static List<Stable> stables;
+
+    static Tractor tractor;
+    static CropDuster cropDuster;
+
     static Field field;
+
     static Store<EdibleEgg> eggStore;
     static Store<EarOfCorn> cornStore;
-
     static Store<Tomato> tomatoStore;
     static Store<Potato> potatoStore;
 
@@ -40,6 +47,12 @@ final public class Farm {
         }
         if(numHorses%Stable.maxAnimals>0)stables.add(new Stable(numHorses%Stable.maxAnimals));
         field = Field.getInstance();
+        eggStore = new Store<>(49,new EdibleEgg());
+        cornStore = new Store<>(231, new EarOfCorn());
+        tomatoStore = new Store<>(21, new Tomato());
+        potatoStore = new Store<>(0, new Potato());
+        tractor = new Tractor();
+        cropDuster = new CropDuster();
     }
 
     static public Integer countHorses(){
@@ -72,5 +85,37 @@ final public class Farm {
             chickens.addAll(coop.animals);
         }
         return chickens;
+    }
+
+    public static Store<EdibleEgg> getEggStore() {
+        return eggStore;
+    }
+
+    public static Store<EarOfCorn> getCornStore() {
+        return cornStore;
+    }
+
+    public static Store<Tomato> getTomatoStore() {
+        return tomatoStore;
+    }
+
+    public static Store<Potato> getPotatoStore() {
+        return potatoStore;
+    }
+
+    public static Field getField() {
+        return field;
+    }
+
+    public static List<ChickenCoop> getCoops() {
+        return coops;
+    }
+
+    public static Tractor getTractor() {
+        return tractor;
+    }
+
+    public static CropDuster getCropDuster() {
+        return cropDuster;
     }
 }

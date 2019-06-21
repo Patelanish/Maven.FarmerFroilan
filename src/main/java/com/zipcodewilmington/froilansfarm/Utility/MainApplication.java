@@ -6,7 +6,8 @@ package com.zipcodewilmington.froilansfarm.Utility;
 public class MainApplication {
 
     public static void main(String[] args) {
-
+        WeeklySchedule ws = new WeeklySchedule();
+        ws.run();
     }
 
 }

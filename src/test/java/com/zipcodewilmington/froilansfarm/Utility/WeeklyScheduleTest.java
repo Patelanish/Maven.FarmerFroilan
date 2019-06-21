@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class WeeklyScheduleTest {
+    public WeeklySchedule ws = new WeeklySchedule();
 
     @Test
     public void dailyActivities() {

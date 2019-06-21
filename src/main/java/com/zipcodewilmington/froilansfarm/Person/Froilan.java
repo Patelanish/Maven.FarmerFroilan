@@ -1,16 +1,17 @@
 package com.zipcodewilmington.froilansfarm.Person;
 
+import com.zipcodewilmington.froilansfarm.Collections.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Farmer;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.Produce.Crop;
+import com.zipcodewilmington.froilansfarm.Produce.CropRow;
+import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 
 public class Froilan extends Person implements Farmer {
-    public void plant(Crop crop) {
 
-    }
 
-    public void eat(Edible food) {
+    public void eat(Edible food, Integer qty) {
 
     }
 
@@ -31,7 +32,18 @@ public class Froilan extends Person implements Farmer {
 
     }
 
-    public void ride() {
+    @Override
+    public void plant(Crop crop, CropRow row) {
+
+    }
+
+    @Override
+    public void harvest(Tractor tractor, CropRow<Crop> row) {
+
+    }
+
+    @Override
+    public void harvest(ChickenCoop cp) {
 
     }
 }
