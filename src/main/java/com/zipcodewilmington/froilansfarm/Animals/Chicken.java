@@ -14,7 +14,8 @@ public class Chicken extends Animal implements Produce<EdibleEgg> {
     }
 
 
-    public void yield(EdibleEgg egg) {
+    public EdibleEgg yield(EdibleEgg egg) {
+        return new EdibleEgg();
 
     }
 

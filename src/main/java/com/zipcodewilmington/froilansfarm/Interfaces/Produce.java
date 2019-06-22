@@ -1,11 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Produce.EdibleEgg;
 
 public interface Produce<T extends Edible> {
 
 
-    void yield (T edible);
+    EdibleEgg yield (T edible);
 
 
 }
