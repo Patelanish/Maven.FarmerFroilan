@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.Produce;
 
-public class Crop {
+public abstract class Crop {
 }

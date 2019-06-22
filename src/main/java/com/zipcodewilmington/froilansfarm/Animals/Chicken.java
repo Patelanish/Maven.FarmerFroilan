@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class Chicken extends Animal implements Produce<EdibleEgg> {
-    public void eat() {
+    public void eat(Edible corn, Integer qty) {
 
     }
 
@@ -21,5 +21,10 @@ public class Chicken extends Animal implements Produce<EdibleEgg> {
 
     public void eat(Edible food) {
 
+    }
+
+    @Override
+    public void setHasEatenFalse() {
+        //hasEatenToday=false;
     }
 }

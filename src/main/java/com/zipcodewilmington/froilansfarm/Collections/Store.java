@@ -7,7 +7,12 @@ import java.util.List;
 public class Store<E extends Edible> {
 
     private Integer edibleCount;
+
     private final E edible;
+
+    public E getEdible() {
+        return edible;
+    }
 
     public Store(Integer edibleCount, E edibleType) {
         this.edibleCount = edibleCount;

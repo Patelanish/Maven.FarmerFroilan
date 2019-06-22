@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Collections;
 
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Produce.EdibleEgg;
+import com.zipcodewilmington.froilansfarm.Produce.Potato;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -46,6 +48,14 @@ public class StoreTest {
         Store<EdibleEgg> store = new Store(initial,new EdibleEgg());
         store.store(new EdibleEgg(),stored);
         Integer actual = store.getCount();
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void getEdible() {
+        Edible expected =new Potato();
+        Store<Potato> store = new Store(1234567890,expected);
+        Edible actual=store.getEdible();
         Assert.assertEquals(expected,actual);
     }
 }
