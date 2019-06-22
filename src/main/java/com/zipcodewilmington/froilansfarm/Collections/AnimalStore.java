@@ -26,4 +26,18 @@ abstract class AnimalStore<E extends Animal> {
         if(i< animals.size()) return animals.get(i);
         return null;
     }
+
+    public void setAllHasEatenFalse(){
+        for(int i = 0; i<this.animals.size();i++){
+            this.animals.get(i).setHasEatenFalse();
+        }
+    }
+
+    public Integer getNumHasEaten(){
+        Integer counter=0;
+        for(int i = 0; i<this.animals.size();i++){
+       //     if(this.animals.get(i).hasEaten())counter++;//////////////////////////
+        }
+        return counter;
+    }
 }

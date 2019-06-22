@@ -12,6 +12,11 @@ public class Froilanda extends Person implements Pilot {
 
     }
 
+    @Override
+    public void setHasEatenFalse() {
+        //hasEatenToday=false;
+    }
+
     public void makeNoise() {
 
     }

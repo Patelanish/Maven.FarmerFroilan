@@ -15,4 +15,9 @@ public class Horse extends Animal implements Rideable {
     public void eat(Edible food) {
 
     }
+
+    @Override
+    public void setHasEatenFalse() {
+        //hasEatenToday=false;
+    }
 }

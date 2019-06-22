@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Collections;
 
+import com.zipcodewilmington.froilansfarm.Animals.Chicken;
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
+import com.zipcodewilmington.froilansfarm.Person.Froilan;
+import com.zipcodewilmington.froilansfarm.Person.Froilanda;
 import com.zipcodewilmington.froilansfarm.Produce.EarOfCorn;
 import com.zipcodewilmington.froilansfarm.Produce.EdibleEgg;
 import com.zipcodewilmington.froilansfarm.Produce.Potato;
@@ -12,7 +15,6 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
 
 public class FarmTest {
 
@@ -96,5 +98,39 @@ public class FarmTest {
     public void getCropDuster() {
         CropDuster cropDuster = Farm.getCropDuster();
         Assert.assertNotNull(cropDuster);
+    }
+
+    @Test
+    public void setAllHorsesRiddenToFalse() {
+        Farm farm = Farm.getInstance();
+        List<Horse> horses = Farm.getHorses();
+        Froilanda froilanda = new Froilanda();
+        froilanda.ride(horses.get(2));
+        froilanda.ride(horses.get(5));
+        froilanda.ride(horses.get(6));
+        Integer expected = 3;
+        Integer actual = Farm.countHorsesRidden();
+        Assert.assertEquals(expected,actual);
+        Farm.setAllHorsesRiddenToFalse();
+        expected=0;
+        actual=Farm.countHorsesRidden();
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void setAllHasEatenToFalse() {
+        Farm farm = Farm.getInstance();
+        FarmHouse farmHouse = FarmHouse.getInstance();
+        Froilan froilan = FarmHouse.getFroilan();
+        froilan.eat(new EarOfCorn(),4567890);
+        List<Chicken> chickens = Farm.getChickens();
+        chickens.get(0).eat(new EdibleEgg(),99);
+        Integer expected=2;
+        Integer actual=Farm.countHasEaten();
+        Assert.assertEquals(expected,actual);
+        Farm.setAllHasEatenToFalse();
+        expected=0;
+        actual=Farm.countHasEaten();
+        Assert.assertEquals(expected,actual);
     }
 }

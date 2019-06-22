@@ -21,4 +21,9 @@ public class Chicken extends Animal implements Produce<EdibleEgg> {
     public void eat(Edible food) {
 
     }
+
+    @Override
+    public void setHasEatenFalse() {
+        //hasEatenToday=false;
+    }
 }

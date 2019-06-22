@@ -118,4 +118,30 @@ final public class Farm {
     public static CropDuster getCropDuster() {
         return cropDuster;
     }
+
+    public static void setAllHorsesRiddenToFalse(){
+        for(Stable stable:stables){
+            stable.setAllRiddenFalse();
+        }
+    }
+
+    public static Integer countHorsesRidden(){
+        Integer answer=0;
+        for(Stable stable:stables){answer+=stable.countRiddenToday();}
+        return answer;
+    }
+
+    public static Integer countHasEaten(){
+        Integer counter=0;
+        for(Stable stable:stables){counter+=stable.getNumHasEaten();}
+        for(ChickenCoop coop:coops){counter+=coop.getNumHasEaten();}
+        counter+=FarmHouse.getNumHasEaten();
+        return counter;
+    }
+
+    public static void setAllHasEatenToFalse(){
+        for(Stable stable:stables){stable.setAllHasEatenFalse();}
+        for(ChickenCoop coop:coops){coop.setAllHasEatenFalse();}
+        FarmHouse.setAllHasEatenFalse();
+    }
 }
