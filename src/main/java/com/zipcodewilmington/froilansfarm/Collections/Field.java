@@ -17,11 +17,7 @@ final public class Field {
         return INSTANCE;
     }
 
-    private Field(){
-        rows.add(new CropRow<CornStalk>());
-        rows.add(new CropRow<TomatoPlant>());
-        rows.add(new CropRow<PotatoPlant>());
-    }
+    private Field(){}
 
     public static List<CropRow> getRows() {
         return rows;

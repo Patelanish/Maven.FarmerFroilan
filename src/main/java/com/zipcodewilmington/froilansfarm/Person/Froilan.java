@@ -33,7 +33,7 @@ public class Froilan extends Person implements Farmer {
     }
 
     @Override
-    public void plant(Crop crop, CropRow row) {
+    public void plant(Crop crop) {
 
     }
 
