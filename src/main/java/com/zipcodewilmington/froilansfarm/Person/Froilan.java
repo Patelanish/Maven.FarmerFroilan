@@ -46,4 +46,9 @@ public class Froilan extends Person implements Farmer {
     public void harvest(ChickenCoop cp) {
 
     }
+
+    @Override
+    public void setHasEatenFalse() {
+        //hasEatenToday=false;
+    }
 }

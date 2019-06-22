@@ -69,4 +69,5 @@ public class ChickenCoopTest {
         actualFert=coop.countFertilized();
         Assert.assertEquals(expectedFert,actualFert);
     }
+
 }

@@ -33,4 +33,18 @@ final public class FarmHouse {
         people.add(froilan);
         people.add(froilanda);
     }
+
+    public static Integer getNumHasEaten(){
+        Integer counter=0;
+        for(int i = 0; i<people.size();i++){
+            //     if(this.people.get(i).hasEaten())counter++;//////////////////////////
+        }
+        return counter;
+    }
+
+    public static void setAllHasEatenFalse(){
+        for(int i = 0; i<people.size();i++){
+            people.get(i).setHasEatenFalse();
+        }
+    }
 }
