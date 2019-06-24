@@ -19,7 +19,21 @@ public class FieldTest {
     }
 
     @Test
+    public void getRows0() {
+        Field.clear();
+        List<CropRow> rows = Field.getRows();
+        Integer expectedSize = 0;
+        Integer actualSize=rows.size();
+        Assert.assertEquals(expectedSize,actualSize);
+    }
+
+    @Test
     public void getRows() {
+        Field.clear();
+        CropRow<? extends Crop> newRow = new CropRow<>();
+        Field.addRow(newRow);
+        Field.addRow(newRow);
+        Field.addRow(newRow);
         List<CropRow> rows = Field.getRows();
         Integer expectedSize = 3;
         Integer actualSize=rows.size();

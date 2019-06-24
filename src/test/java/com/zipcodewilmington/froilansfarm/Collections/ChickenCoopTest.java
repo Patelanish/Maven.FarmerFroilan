@@ -28,9 +28,9 @@ public class ChickenCoopTest {
     public void countFertilized() {
         ChickenCoop coop = new ChickenCoop(5);
         Chicken hen = coop.getAnimal(2);
-//        hen.fertilize();
+        hen.setHasBeenFertilized(true);
         hen = coop.getAnimal(0);
-//        hen.fertilize();
+        hen.setHasBeenFertilized(true);
         Integer expected = 2;
         Integer actual = coop.countFertilized();
         Assert.assertEquals(expected,actual);
@@ -40,9 +40,9 @@ public class ChickenCoopTest {
     public void setAllFertilizedFalse() {
         ChickenCoop coop = new ChickenCoop(5);
         Chicken hen = coop.getAnimal(2);
-//        hen.fertilize();
+        hen.setHasBeenFertilized(true);
         hen = coop.getAnimal(0);
-//        hen.fertilize();
+        hen.setHasBeenFertilized(true);
         Integer expected = 0;
         coop.setAllFertilizedFalse();
         Integer actual = coop.countFertilized();
@@ -54,9 +54,9 @@ public class ChickenCoopTest {
         Integer numChickens=5;
         ChickenCoop coop = new ChickenCoop(numChickens);
         Chicken hen = coop.getAnimal(2);
-//        hen.fertilize();
+        hen.setHasBeenFertilized(true);
         hen = coop.getAnimal(0);
-//        hen.fertilize();
+        hen.setHasBeenFertilized(true);
         Integer expectedFert=2;
         Integer actualFert=coop.countFertilized();
         Assert.assertEquals(expectedFert,actualFert);

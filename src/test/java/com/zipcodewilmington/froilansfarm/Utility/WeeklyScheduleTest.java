@@ -13,8 +13,6 @@ import java.io.InputStream;
 import static org.junit.Assert.*;
 
 public class WeeklyScheduleTest {
-
-    Double expected =50.0;
     private InputStream testInputStream = new ByteArrayInputStream("ok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\n".getBytes());
     private Console console = new Console(testInputStream,System.out);
     private WeeklySchedule ws = new WeeklySchedule(console);
