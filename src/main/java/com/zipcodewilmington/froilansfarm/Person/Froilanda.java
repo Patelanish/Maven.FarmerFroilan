@@ -19,7 +19,13 @@ public class Froilanda extends Person implements Pilot {
 
     @Override
     public void setHasEatenFalse() {
-        //hasEatenToday=false;
+        hasEaten=false;
+    }
+
+
+    @Override
+    public boolean hasEaten() {
+        return hasEaten;
     }
 
     public void makeNoise() {

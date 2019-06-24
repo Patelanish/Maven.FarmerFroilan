@@ -28,7 +28,7 @@ public final class Console {
         println(prompt, args);
         return input.nextLine();
     }
-
+/*
     public Double getDoubleInput(String prompt, Object... args) {
         String stringInput = getStringInput(prompt, args);
         try {
@@ -55,6 +55,6 @@ public final class Console {
 
     public Integer getIntegerInput(String prompt, Object... args) {
         return getLongInput(prompt, args).intValue();
-    }
+    }*/
 }
 

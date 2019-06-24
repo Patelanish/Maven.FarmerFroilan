@@ -15,12 +15,12 @@ public class ChickenCoop extends AnimalStore<Chicken>{
 
     public Integer countFertilized(){
         Integer counter=0;
-     //   for(Chicken chicken:this.animals)if(chicken.isFertilized())counter++;///////////////////////////////
+        for(Chicken chicken:this.animals)if(chicken.isHasBeenFertilized())counter++;
         return counter;
     }
 
     public void setAllFertilizedFalse(){
-        //       for(int i=0;i<this.animals.size();i++) animals.setFertilized(false);///////////////////////////////
+        for(int i=0;i<this.animals.size();i++) animals.get(i).setHasBeenFertilized(false);
     }
 
     public Integer harvest(){

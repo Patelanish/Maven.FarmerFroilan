@@ -37,7 +37,7 @@ final public class FarmHouse {
     public static Integer getNumHasEaten(){
         Integer counter=0;
         for(int i = 0; i<people.size();i++){
-            //     if(this.people.get(i).hasEaten())counter++;//////////////////////////
+            if(people.get(i).hasEaten())counter++;
         }
         return counter;
     }

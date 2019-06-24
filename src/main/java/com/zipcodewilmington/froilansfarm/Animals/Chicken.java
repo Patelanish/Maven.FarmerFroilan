@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Chicken extends Animal implements Produce<EdibleEgg> {
-    private boolean hasEaten;
     private boolean hasBeenFertilized;
 
     List<Edible> eatList = new ArrayList<Edible>();

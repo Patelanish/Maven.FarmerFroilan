@@ -30,4 +30,14 @@ final public class Field {
     public static void removeRow(int index){
         rows.remove(index);
     }
+    public static Integer countFertilized (){
+        Integer counter=0;
+       // for(CropRow row:rows) if(row.isHasBeenFertilized())counter++;///////////////////
+        return counter;
+    }
+    public static void clear(){
+        for(int i=0;i<rows.size();i++){
+            rows.remove(i);
+        }
+    }
 }

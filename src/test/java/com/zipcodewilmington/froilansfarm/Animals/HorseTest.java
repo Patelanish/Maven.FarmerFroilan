@@ -4,8 +4,6 @@ import com.zipcodewilmington.froilansfarm.Produce.EarOfCorn;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class HorseTest {
 
     @Test
@@ -103,7 +101,7 @@ public class HorseTest {
         //given
         Horse horse = new Horse();
         //when
-        boolean isRiben =  horse.isRiden();
+        boolean isRiben =  horse.isRidden();
         //then
         Assert.assertTrue(!isRiben);
     }
@@ -113,8 +111,8 @@ public class HorseTest {
         //given
         Horse horse = new Horse();
         //when
-        horse.setIsRiden(true);
+        horse.setIsRidden(true);
         //then
-        Assert.assertTrue(horse.isRiden());
+        Assert.assertTrue(horse.isRidden());
     }
 }

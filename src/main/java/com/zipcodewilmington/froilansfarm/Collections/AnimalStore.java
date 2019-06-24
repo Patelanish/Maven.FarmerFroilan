@@ -35,7 +35,7 @@ abstract class AnimalStore<E extends Animal> {
     public Integer getNumHasEaten(){
         Integer counter=0;
         for(int i = 0; i<this.animals.size();i++){
-       //     if(this.animals.get(i).hasEaten())counter++;//////////////////////////
+            if(this.animals.get(i).hasEaten())counter++;
         }
         return counter;
     }
