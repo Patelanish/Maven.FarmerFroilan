@@ -36,10 +36,10 @@ public class Chicken extends Animal implements Produce<EdibleEgg> {
         System.out.println("CLUCK");
     }
 
-    public EdibleEgg yield(EdibleEgg edible) {
+    public EdibleEgg yield() {
         EdibleEgg edibleEgg = null;
         if(!hasBeenFertilized){
-            edibleEgg = edible;
+            edibleEgg = new EdibleEgg();
         }
         return edibleEgg;
     }
@@ -51,4 +51,5 @@ public class Chicken extends Animal implements Produce<EdibleEgg> {
     public void setHasBeenFertilized(boolean hasBeenFertilized) {
         this.hasBeenFertilized = hasBeenFertilized;
     }
+
 }

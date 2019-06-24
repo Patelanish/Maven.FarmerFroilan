@@ -15,6 +15,11 @@ public class Froilan extends Person implements Farmer {
 
     }
 
+    @Override
+    public boolean hasEaten() {
+        return false;
+    }
+
     public void makeNoise() {
 
     }

@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.Produce.EdibleEgg;
 public interface Produce<T extends Edible> {
 
 
-    EdibleEgg yield (T edible);
+    Edible yield ();
 
 
 }

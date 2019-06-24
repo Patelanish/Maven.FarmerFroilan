@@ -4,8 +4,23 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class PotatoPlant extends Crop implements Produce {
-    public EdibleEgg yield(Edible edible) {
+    private boolean hasBeenFertilized;
 
-        return null;
+    public Potato yield() {
+        Potato potato = null;
+        if(!hasBeenFertilized){
+            potato = new Potato();
+        }
+        return potato;
     }
-}
+
+    public boolean isHasBeenFertilized() {
+        return hasBeenFertilized;
+    }
+
+    public void setHasBeenFertilized(boolean hasBeenFertilized) {
+        this.hasBeenFertilized = hasBeenFertilized;
+    }
+
+
+    }

@@ -4,10 +4,22 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 
 public class CornStalk extends Crop implements Produce<EarOfCorn> {
-    public EdibleEgg yield(EarOfCorn edible) {
+    private boolean hasBeenFertilized;
 
+    public EarOfCorn yield() {
+        EarOfCorn earOfCorn = null;
+        if(!hasBeenFertilized){
+            earOfCorn = new EarOfCorn();
+        }
+        return earOfCorn;
+    }
 
-        return null;
+    public boolean isHasBeenFertilized() {
+        return hasBeenFertilized;
+    }
+
+    public void setHasBeenFertilized(boolean hasBeenFertilized) {
+        this.hasBeenFertilized = hasBeenFertilized;
     }
 
 

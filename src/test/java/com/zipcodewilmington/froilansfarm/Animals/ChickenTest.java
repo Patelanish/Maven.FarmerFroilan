@@ -66,7 +66,7 @@ public class ChickenTest {
         Chicken chicken = new Chicken();
         chicken.setHasBeenFertilized(false);
         //when
-        EdibleEgg egg = chicken.yield(new EdibleEgg());
+        EdibleEgg egg = chicken.yield();
         //then
         Assert.assertTrue(egg!=null);
     }
