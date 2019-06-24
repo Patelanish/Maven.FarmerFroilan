@@ -76,11 +76,11 @@ public class WeeklySchedule {
     protected void sundaySchedule(){
         dailyActivitiesBegin();
         console.println("It's Sunday. Time for some planting!");
-        froilan.plant(new CornStalk(),Field.getRows().get(0));
+        froilan.plant(new CornStalk());
         console.println("Row 0 planted with corn.");
-        froilan.plant(new TomatoPlant(),Field.getRows().get(1));
+        froilan.plant(new TomatoPlant());
         console.println("Row 1 planted with tomatoes.");
-        froilan.plant(new PotatoPlant(),Field.getRows().get(2));
+        froilan.plant(new PotatoPlant());
         console.println("Row 2 planted with potatoes.\nGood work, Farmer Froilan!");
         dailyActivitiesEnd();
     }
@@ -119,11 +119,11 @@ public class WeeklySchedule {
     protected void thursdaySchedule(){
         dailyActivitiesBegin();
         console.println("It's Thursday. Time for some more planting!");
-        froilan.plant(new CornStalk(),Field.getRows().get(0));
+        froilan.plant(new CornStalk());
         console.println("Row 0 planted with corn.");
-        froilan.plant(new TomatoPlant(),Field.getRows().get(1));
+        froilan.plant(new TomatoPlant());
         console.println("Row 1 planted with tomatoes.");
-        froilan.plant(new PotatoPlant(),Field.getRows().get(2));
+        froilan.plant(new PotatoPlant());
         console.println("Row 2 planted with potatoes.\nFarmer Froilan, you've done it again!");
         dailyActivitiesEnd();
     }
