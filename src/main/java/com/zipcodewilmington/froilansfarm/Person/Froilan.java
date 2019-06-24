@@ -15,6 +15,16 @@ public class Froilan extends Person implements Farmer {
 
     }
 
+    @Override
+    public void setHasEatenFalse() {
+        hasEaten=false;
+    }
+
+    @Override
+    public boolean hasEaten() {
+        return hasEaten;
+    }
+
     public void makeNoise() {
 
     }
@@ -45,10 +55,5 @@ public class Froilan extends Person implements Farmer {
     @Override
     public void harvest(ChickenCoop cp) {
 
-    }
-
-    @Override
-    public void setHasEatenFalse() {
-        //hasEatenToday=false;
     }
 }

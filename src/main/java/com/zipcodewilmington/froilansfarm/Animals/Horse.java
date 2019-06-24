@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Horse extends Animal implements Rideable {
-    private boolean hasEaten;
     private boolean isMounted;
     private boolean isRidden;
     List<Edible> eatList = new ArrayList<Edible>();
@@ -45,10 +44,10 @@ public class Horse extends Animal implements Rideable {
         return false;
     }
 
-    public boolean isRiden() {
+    public boolean isRidden() {
         return isRidden;
     }
-    public void setIsRiden(boolean isRidden){
+    public void setIsRidden(boolean isRidden){
         this.isRidden = isRidden;
     }
 }
