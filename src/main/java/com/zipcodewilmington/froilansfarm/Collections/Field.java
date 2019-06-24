@@ -32,7 +32,7 @@ final public class Field {
     }
     public static Integer countFertilized (){
         Integer counter=0;
-    //    for(CropRow row:rows) if(row.isFertilized())counter++; /////////////////////////////////////
+       // for(CropRow row:rows) if(row.isHasBeenFertilized())counter++;///////////////////
         return counter;
     }
     public static void clear(){
