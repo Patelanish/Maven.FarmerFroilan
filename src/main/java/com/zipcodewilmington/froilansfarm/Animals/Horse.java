@@ -3,21 +3,52 @@ package com.zipcodewilmington.froilansfarm.Animals;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 
-public class Horse extends Animal implements Rideable {
-    public void eat(Edible corn, Integer qty) {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Horse extends Animal implements Rideable {
+    private boolean hasEaten;
+    private boolean isMounted;
+    private boolean isRidden;
+    List<Edible> eatList = new ArrayList<Edible>();
+
+    public void eat(Edible edible, Integer qty) {
+        hasEaten = true;
+        eatList.add(edible);
+    }
+    public List<Edible> getEatList() {
+        return eatList;
+    }
+
+    public boolean hasEaten() {
+        return hasEaten;
+    }
+    public void setHasEatenFalse() {
+        hasEaten = false;
+    }
+    public void setHasEaten(boolean hasEaten) {
+        this.hasEaten = hasEaten;
     }
 
     public void makeNoise() {
-
+        System.out.println("NEEEIGH");
     }
 
-    public void eat(Edible food) {
-
+    public boolean isMounted() {
+        return isMounted;
+    }
+    public void setIsMounted(boolean isMounted){
+        this.isMounted = isMounted;
     }
 
-    @Override
-    public void setHasEatenFalse() {
-        //hasEatenToday=false;
+    public boolean isDismounted() {
+        return false;
+    }
+
+    public boolean isRiden() {
+        return isRidden;
+    }
+    public void setIsRiden(boolean isRidden){
+        this.isRidden = isRidden;
     }
 }
