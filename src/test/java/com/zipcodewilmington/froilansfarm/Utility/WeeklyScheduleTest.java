@@ -71,9 +71,9 @@ public class WeeklyScheduleTest {
         Integer cornBefore = Farm.getCornStore().getCount();
         Integer tomatoesBefore = Farm.getTomatoStore().getCount();
         Integer potatoesBefore = Farm.getPotatoStore().getCount();
-        Integer cornExpected = cornBefore+Field.getRows().get(0).getCrops().size();
-        Integer tomatoesExpected = tomatoesBefore+Field.getRows().get(1).getCrops().size();
-        Integer potatoesExpected = potatoesBefore+Field.getRows().get(2).getCrops().size();
+        Integer cornExpected = cornBefore+Field.getRows().get(0).getCropList().size();
+        Integer tomatoesExpected = tomatoesBefore+Field.getRows().get(1).getCropList().size();
+        Integer potatoesExpected = potatoesBefore+Field.getRows().get(2).getCropList().size();
         ws.tuesdaySchedule();
         Integer cornActual = Farm.getCornStore().getCount();
         Integer tomatoesActual = Farm.getTomatoStore().getCount();
@@ -124,9 +124,9 @@ public class WeeklyScheduleTest {
         Integer cornBefore = Farm.getCornStore().getCount();
         Integer tomatoesBefore = Farm.getTomatoStore().getCount();
         Integer potatoesBefore = Farm.getPotatoStore().getCount();
-        Integer cornExpected = cornBefore+Field.getRows().get(0).getCrops().size();
-        Integer tomatoesExpected = tomatoesBefore+Field.getRows().get(1).getCrops().size();
-        Integer potatoesExpected = potatoesBefore+Field.getRows().get(2).getCrops().size();
+        Integer cornExpected = cornBefore+Field.getRows().get(0).getCropList().size();
+        Integer tomatoesExpected = tomatoesBefore+Field.getRows().get(1).getCropList().size();
+        Integer potatoesExpected = potatoesBefore+Field.getRows().get(2).getCropList().size();
         ws.fridaySchedule();
         Integer cornActual = Farm.getCornStore().getCount();
         Integer tomatoesActual = Farm.getTomatoStore().getCount();

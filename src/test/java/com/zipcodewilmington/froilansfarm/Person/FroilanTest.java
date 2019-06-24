@@ -82,7 +82,7 @@ public class FroilanTest {
         Froilan froilan = new Froilan();
 
         froilan.ride(rideable);
-        assertTrue(rideable.isRiden());
+        assertTrue(rideable.isRidden());
 
     }
 }

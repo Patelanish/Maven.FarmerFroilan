@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Collections;
 
+import com.zipcodewilmington.froilansfarm.Animals.Horse;
+
 public class Stable extends AnimalStore<Horse>{
 
     Stable(){

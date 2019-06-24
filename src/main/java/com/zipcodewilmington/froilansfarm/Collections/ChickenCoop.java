@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Collections;
 
+import com.zipcodewilmington.froilansfarm.Animals.Chicken;
+
 public class ChickenCoop extends AnimalStore<Chicken>{
 
     public ChickenCoop(){

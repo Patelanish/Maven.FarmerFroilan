@@ -4,5 +4,5 @@ public interface Rideable {
 
     boolean isMounted();
     boolean isDismounted();
-    boolean isRiden();
+    boolean isRidden();
 }
