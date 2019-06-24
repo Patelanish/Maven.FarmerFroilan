@@ -1,10 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Collections;
 
-import com.zipcodewilmington.froilansfarm.Animals.Chicken;
-import com.zipcodewilmington.froilansfarm.Animals.Horse;
-
-import java.util.List;
-
 public class Stable extends AnimalStore<Horse>{
 
     Stable(){
