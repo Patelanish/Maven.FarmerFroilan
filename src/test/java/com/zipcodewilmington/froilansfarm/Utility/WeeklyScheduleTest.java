@@ -10,6 +10,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class WeeklyScheduleTest {
+
+
     public WeeklySchedule ws = new WeeklySchedule();
     Farm farm = Farm.getInstance();
     FarmHouse farmhouse = FarmHouse.getInstance();

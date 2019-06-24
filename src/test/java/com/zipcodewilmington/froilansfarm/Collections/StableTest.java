@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Collections;
 
+import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import com.zipcodewilmington.froilansfarm.Person.Froilan;
 import com.zipcodewilmington.froilansfarm.Person.Froilanda;
 import org.junit.Assert;
