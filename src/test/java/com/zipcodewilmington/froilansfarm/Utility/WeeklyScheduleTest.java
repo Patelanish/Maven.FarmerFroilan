@@ -7,12 +7,17 @@ import com.zipcodewilmington.froilansfarm.Produce.CornStalk;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
 import static org.junit.Assert.*;
 
 public class WeeklyScheduleTest {
-    public WeeklySchedule ws = new WeeklySchedule();
-    Farm farm = Farm.getInstance();
-    FarmHouse farmhouse = FarmHouse.getInstance();
+
+    Double expected =50.0;
+    private InputStream testInputStream = new ByteArrayInputStream("ok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\nok\n".getBytes());
+    private Console console = new Console(testInputStream,System.out);
+    private WeeklySchedule ws = new WeeklySchedule(console);
 
     @Test
     public void testDailyActivitiesBegin() {
@@ -134,5 +139,23 @@ public class WeeklyScheduleTest {
         Assert.assertEquals(cornExpected,cornActual);
         Assert.assertEquals(tomatoesExpected,tomatoesActual);
         Assert.assertEquals(potatoesExpected,potatoesActual);
+    }
+
+    @Test
+    public void run() {
+        Integer cornBefore = Farm.getCornStore().getCount();
+        Integer tomatoesBefore = Farm.getTomatoStore().getCount();
+        Integer potatoesBefore = Farm.getPotatoStore().getCount();
+        Integer eggsBefore = Farm.getEggStore().getCount();
+        ws.run();
+        Integer cornAfter = Farm.getCornStore().getCount();
+        Integer tomatoesAfter = Farm.getTomatoStore().getCount();
+        Integer potatoesAfter = Farm.getPotatoStore().getCount();
+        Integer eggsAfter = Farm.getEggStore().getCount();
+        Assert.assertTrue(cornAfter>cornBefore);
+        Assert.assertTrue(tomatoesAfter>tomatoesBefore);
+        Assert.assertTrue(potatoesAfter>potatoesBefore);
+        Assert.assertTrue(eggsAfter>eggsBefore);
+
     }
 }

@@ -27,7 +27,7 @@ public class FroilanTest {
         list.add(crop);
         froilan.plant(crop);
 
-        Integer actual= cropRow.getCrops().size();
+        Integer actual= cropRow.getCropList().size();
         Assert.assertEquals(expected, actual);
     }
 

@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Collections;
 
+import com.zipcodewilmington.froilansfarm.Animals.Chicken;
 import org.junit.Assert;
 import org.junit.Test;
 
