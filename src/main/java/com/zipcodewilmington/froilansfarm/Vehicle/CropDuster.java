@@ -20,26 +20,47 @@ public class CropDuster extends Vehicle implements AirCraft, FarmVehicle {
     }
 
     public Edible harvest(Produce produce) {
+
         return null;
     }
 
 
-
     public boolean isMounted() {
+
         return isMounted;
     }
     public void setIsMounted(boolean isMounted){
+
         this.isMounted = isMounted;
     }
 
     public boolean isDismounted() {
+
         return false;
     }
 
     public boolean isRidden() {
+
         return isRidden;
     }
     public void setIsRidden(boolean isRidden){
+
         this.isRidden = isRidden;
     }
+
+    @Override
+    public void mount() {
+
+    }
+
+    @Override
+    public void dismount() {
+
+    }
+
+    @Override
+    public void ride() {
+
+    }
+
 }

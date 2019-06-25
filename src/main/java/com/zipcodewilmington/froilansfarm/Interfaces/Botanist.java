@@ -5,5 +5,5 @@ import com.zipcodewilmington.froilansfarm.Produce.CropRow;
 
 public interface Botanist<T extends Crop> {
 
-    void plant(T crop);
+    void plant(T crop, CropRow cropRow);
 }

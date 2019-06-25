@@ -10,13 +10,16 @@ import com.zipcodewilmington.froilansfarm.Produce.EdibleEgg;
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.ArrayList;
-
 import static org.junit.Assert.*;
+
+
+
 
 public class FroilanTest {
 
     @Test
     public void plant() {
+
 
         Crop crop = new CornStalk();
         Integer expected= 1;
@@ -25,7 +28,7 @@ public class FroilanTest {
 
         ArrayList<Crop> list  = new ArrayList<Crop>();
         list.add(crop);
-        froilan.plant(crop);
+        froilan.plant(crop, cropRow);
 
         Integer actual= cropRow.getCropList().size();
         Assert.assertEquals(expected, actual);
@@ -39,7 +42,7 @@ public class FroilanTest {
         Froilan froilan = new Froilan();
         froilan.eat(edible, 1);
         boolean expected= true;
-        boolean actual= froilan.hasEaten();
+        boolean actual= froilan.hasEaten;
 
         Assert.assertEquals(expected, actual);
 
@@ -48,6 +51,11 @@ public class FroilanTest {
 
     @Test
     public void makeNoise() {
+
+        Froilan froilan= new Froilan();
+        froilan.makeNoise();
+        String expected= "Another day, another nickel!";
+        assertEquals(expected, "Another day, another nickel!");
     }
 
     @Test
@@ -58,7 +66,7 @@ public class FroilanTest {
 
         froilan.mount(rideable);
         boolean expected = true;
-        boolean actual= rideable.isMounted();
+        boolean actual= rideable.isMounted;
 
         Assert.assertEquals(expected, actual);
     }
@@ -70,7 +78,7 @@ public class FroilanTest {
         Froilan froilan = new Froilan();
 
         froilan.dismount(rideable);
-        assertTrue(rideable.isDismounted());
+        assertTrue(rideable.isDismounted);
 
 
     }
@@ -82,7 +90,7 @@ public class FroilanTest {
         Froilan froilan = new Froilan();
 
         froilan.ride(rideable);
-        assertTrue(rideable.isRidden());
+        assertTrue(rideable.isRidden);
 
     }
 }
