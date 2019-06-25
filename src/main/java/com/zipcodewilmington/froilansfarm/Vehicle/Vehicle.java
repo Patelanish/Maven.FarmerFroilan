@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 public abstract class Vehicle implements NoiseMaker, Rideable {
     boolean isMounted;
     boolean isRidden;
+    boolean isDismounted;
     public void makeNoise() {
 
     }
@@ -20,8 +21,8 @@ public abstract class Vehicle implements NoiseMaker, Rideable {
         return false;
     }
 
-    @Override
-    public boolean isRiden() {
+   // @Override
+    public boolean isRidden() {
         return false;
     }
 }

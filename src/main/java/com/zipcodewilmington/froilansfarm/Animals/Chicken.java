@@ -27,8 +27,7 @@ public class Chicken extends Animal implements Produce<EdibleEgg> {
     public void setHasEatenFalse() {
         hasEaten = false;
     }
-    public void setHasEaten(boolean hasEaten) {
-        this.hasEaten = hasEaten;
+    public void setHasEaten(boolean hasEaten) { this.hasEaten = hasEaten;
     }
 
     public void makeNoise() {
