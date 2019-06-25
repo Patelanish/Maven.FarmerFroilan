@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animals;
 
+import com.zipcodewilmington.froilansfarm.Collections.Farm;
+import com.zipcodewilmington.froilansfarm.Collections.Store;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 
@@ -12,8 +14,12 @@ public class Horse extends Animal implements Rideable {
     List<Edible> eatList = new ArrayList<Edible>();
 
     public void eat(Edible edible, Integer qty) {
-        hasEaten = true;
-        eatList.add(edible);
+        Store store = Farm.selectEdibleStore(edible);
+        if(store.getCount()>=qty){
+            store.eat(edible,qty);
+            hasEaten = true;
+            eatList.add(edible);
+        }
     }
     public List<Edible> getEatList() {
         return eatList;

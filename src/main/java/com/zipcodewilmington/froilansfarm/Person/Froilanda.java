@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Person;
 
+import com.zipcodewilmington.froilansfarm.Collections.Farm;
+import com.zipcodewilmington.froilansfarm.Collections.Store;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Pilot;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
@@ -8,14 +10,16 @@ import com.zipcodewilmington.froilansfarm.Produce.CropRow;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 
 public class Froilanda extends Person implements Pilot {
-    public void eat(Edible food, Integer qty) {
 
+    public void eat(Edible edible, Integer qty) {
+        Store store = Farm.selectEdibleStore(edible);
+        if(store.getCount()>=qty){
+            store.eat(edible,qty);
+            hasEaten = true;
+            // eatList.add(edible);
+        }
     }
 
-    @Override
-    public boolean hasEaten() {
-        return false;
-    }
 
     @Override
     public void setHasEatenFalse() {

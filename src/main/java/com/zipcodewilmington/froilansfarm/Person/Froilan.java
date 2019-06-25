@@ -1,6 +1,9 @@
+
 package com.zipcodewilmington.froilansfarm.Person;
 
 import com.zipcodewilmington.froilansfarm.Collections.ChickenCoop;
+import com.zipcodewilmington.froilansfarm.Collections.Farm;
+import com.zipcodewilmington.froilansfarm.Collections.Store;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Farmer;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
@@ -11,15 +14,16 @@ import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 public class Froilan extends Person implements Farmer {
 
 
-    public void eat(Edible food, Integer qty) {
-
+    public void eat(Edible edible, Integer qty) {
+        Store store = Farm.selectEdibleStore(edible);
+        if(store.getCount()>=qty){
+            store.eat(edible,qty);
+            hasEaten = true;
+           // eatList.add(edible);
+        }
     }
 
     @Override
-<<<<<<< HEAD
-    public boolean hasEaten() {
-        return false;
-=======
     public void setHasEatenFalse() {
         hasEaten=false;
     }
@@ -27,7 +31,6 @@ public class Froilan extends Person implements Farmer {
     @Override
     public boolean hasEaten() {
         return hasEaten;
->>>>>>> 60b6564124c04dfbd85498d913cc13c36c1a80b9
     }
 
     public void makeNoise() {
