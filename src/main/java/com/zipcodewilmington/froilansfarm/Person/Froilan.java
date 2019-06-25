@@ -17,6 +17,7 @@ public class Froilan extends Person implements Farmer {
 
     List<Edible> edible;
     Store store;
+    Edible yield;
 
 
     public void eat(Edible food, Integer qty) {

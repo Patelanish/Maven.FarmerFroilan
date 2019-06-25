@@ -6,4 +6,5 @@ public interface FarmVehicle<E extends Edible> {
 
     E harvest(CropRow cropRow);
 
+
 }

@@ -4,11 +4,23 @@ import com.zipcodewilmington.froilansfarm.Interfaces.AirCraft;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+import com.zipcodewilmington.froilansfarm.Produce.CropRow;
 
 public class CropDuster extends Vehicle implements AirCraft, FarmVehicle {
 
-    public void fly() {
+    private boolean isFlying;
 
+
+    public CropDuster() {
+
+    }
+
+    public void fly() {
+       if(isMounted==true){
+           isFlying= true;
+       }
+
+       System.out.println("Up, up, and away!");
     }
 
     public Edible harvest(Edible edible) {
@@ -19,11 +31,10 @@ public class CropDuster extends Vehicle implements AirCraft, FarmVehicle {
 
     }
 
-    public Edible harvest(Produce produce) {
+    public Edible harvest(CropRow cropRow) {
 
         return null;
     }
-
 
     public boolean isMounted() {
 
@@ -62,5 +73,6 @@ public class CropDuster extends Vehicle implements AirCraft, FarmVehicle {
     public void ride() {
 
     }
+
 
 }
