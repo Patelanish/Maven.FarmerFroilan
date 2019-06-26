@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Tractor extends Vehicle implements FarmVehicle {
     
-    public void harvest(CropRow row) {
+    public void harvest(CropRow<Crop> row) {
         if(row.isFertilized()&&this.isMounted){
             List<Crop> cropList = row.getCropList();
             Store store = Farm.selectEdibleStore(cropList.get(0).yield());
