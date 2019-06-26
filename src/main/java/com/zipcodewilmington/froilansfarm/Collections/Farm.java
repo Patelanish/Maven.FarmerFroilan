@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.Collections;
 
 import com.zipcodewilmington.froilansfarm.Animals.Chicken;
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Produce.EarOfCorn;
 import com.zipcodewilmington.froilansfarm.Produce.EdibleEgg;
 import com.zipcodewilmington.froilansfarm.Produce.Potato;
@@ -143,5 +144,25 @@ final public class Farm {
         for(Stable stable:stables){stable.setAllHasEatenFalse();}
         for(ChickenCoop coop:coops){coop.setAllHasEatenFalse();}
         FarmHouse.setAllHasEatenFalse();
+    }
+
+    public static Store selectEdibleStore(Edible edible){
+        String edibleClass = edible.getClass().getSimpleName();
+        Store edibleStore;
+        switch (edibleClass) {
+            case "EarOfCorn": {
+                edibleStore = Farm.getCornStore();
+                break;}
+            case "Potato":{
+                edibleStore = Farm.getPotatoStore();
+                break;}
+            case "Tomato": {
+                edibleStore = Farm.getTomatoStore();
+                break;}
+            default:{
+                edibleStore = Farm.getEggStore();
+                break;}
+        }
+        return edibleStore;
     }
 }

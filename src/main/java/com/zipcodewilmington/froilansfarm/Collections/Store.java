@@ -38,4 +38,8 @@ public class Store<E extends Edible> {
         }
         return false;
     }
+
+    public void storeEdibles(Integer count){
+        edibleCount+=count;
+    }
 }

@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm.Produce;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 
-public class CornStalk extends Crop implements Produce<EarOfCorn> {
+public class CornStalk extends Crop implements Produce {
     private boolean hasBeenFertilized;
 
     public EarOfCorn yield() {

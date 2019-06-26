@@ -4,16 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class CropRow<Crop> {
-    List<Crop> cropList = new ArrayList<Crop>();
+public class CropRow<C extends Crop> {
+    List<C> cropList = new ArrayList<>();
 
-    public List<Crop> getCropList() {
+    public CropRow() {
+        this.isFertilized = false;
+    }
+    public List<C> getCropList() {
         return cropList;
     }
-    public void addCrops(Crop crop){
+    public void addCrops(C crop){
         cropList.add(crop);
     }
-    public Map getCrops() {
-        return null;
+
+    public boolean isFertilized() {
+        return isFertilized;
     }
+
+    public void setFertilized(boolean fertilized) {
+        isFertilized = fertilized;
+    }
+
+    private boolean isFertilized;
 }

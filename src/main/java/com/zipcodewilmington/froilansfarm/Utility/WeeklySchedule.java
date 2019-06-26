@@ -11,6 +11,8 @@ import com.zipcodewilmington.froilansfarm.Produce.CornStalk;
 //import com.zipcodewilmington.froilansfarm.Produce.Crop;
 import com.zipcodewilmington.froilansfarm.Produce.PotatoPlant;
 import com.zipcodewilmington.froilansfarm.Produce.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 
 import java.util.List;
 
@@ -22,6 +24,8 @@ public class WeeklySchedule {
     private static Froilanda froilanda;
     private static Field field;
     private static List<ChickenCoop> coops;
+    private static Tractor tractor = Farm.getTractor();
+    private static CropDuster cropDuster = Farm.getCropDuster();
 
     public WeeklySchedule(Console console){
         this.console=console;
@@ -89,7 +93,9 @@ public class WeeklySchedule {
     protected void mondaySchedule(){
         dailyActivitiesBegin();
         console.println("It's Monday. Let's prep the crop-duster!\nGood luck, Froilanda!");
-        for(int i=0;i<Field.getRows().size();i++)froilanda.fertilize(Farm.getCropDuster(),Field.getRows().get(i));
+        froilanda.mount(cropDuster);
+        for(int i=0;i<Field.getRows().size();i++)cropDuster.fertilize(Field.getRows().get(i));
+        froilanda.dismount(cropDuster);
         console.println("Whew, it's was touch & go, but the ole bucket of bolts made it through another day!" +
                 "\nWell done, Froilanda, that must have been terrifying.  Why don't you take a few days off?\n" +
                 "Maybe you should go inspect our store of moonshine. Oh, well maybe wait until after flying, next time.");
@@ -99,7 +105,9 @@ public class WeeklySchedule {
     protected void tuesdaySchedule(){
         dailyActivitiesBegin();
         console.println("It's Tuesday. Froilan, fire up that tractor for the harvest.");
-        for(int i=0;i<Field.getRows().size();i++)froilan.harvest(Farm.getTractor(),Field.getRows().get(i));
+        froilan.mount(tractor);
+        for(int i=0;i<Field.getRows().size();i++)tractor.harvest(Field.getRows().get(i));
+        froilan.dismount(tractor);
         console.println("Well, all the crops are in.  Hard to believe this pays the bills,\n" +
                 "but what can you expect when you harvest two days after planting?\n" +
                 "Time to call the congressman and make sure they aren't talking about cutting the subsidies again.");
@@ -110,7 +118,7 @@ public class WeeklySchedule {
         dailyActivitiesBegin();
         console.println("It's Wednesday. Let's see what those chickens have been up to.\n" +
                 "Froilan, grab that pitchfork, just in case.");
-        for(int i=0;i<coops.size();i++)froilan.harvest(coops.get(i));
+        froilan.harvest(Farm.getChickens());
         console.println("Okay, all the eggs have been gathered.\n" +
                 "Y'know, we should probably think about doing this more than once a week.\n" +
                 "Too bad Froilanda's nerves are still shot.");
@@ -134,7 +142,9 @@ public class WeeklySchedule {
         console.println("It's Friday. Froilanda, where did you park the crop-duster?\n" +
                 "Oh, there it is in the horse paddock, let's see...\n*clunk*\n" +
                 "... oops, I hope that wasn't important. Ok, off you go!");
-        for(int i=0;i<Field.getRows().size();i++)froilanda.fertilize(Farm.getCropDuster(),Field.getRows().get(i));
+        froilanda.mount(cropDuster);
+        for(int i=0;i<Field.getRows().size();i++)cropDuster.fertilize(Field.getRows().get(i));
+        froilanda.dismount(cropDuster);
         console.println("Froilanda, looks like you succeeded in dusting all the coops, in addition to the crops.\n"+
                 "\nRemember what I told you about saving the moonshine until after?\n" +
                 "Oh well, at least we won't be needing to harvest any edible eggs for five more days.");
@@ -144,7 +154,9 @@ public class WeeklySchedule {
     protected void saturdaySchedule(){
         dailyActivitiesBegin();
         console.println("It's Saturday. Tractor's ready for some harvesting.\n");
-        for(int i=0;i<Field.getRows().size();i++)froilan.harvest(Farm.getTractor(),Field.getRows().get(i));
+        froilan.mount(tractor);
+        for(int i=0;i<Field.getRows().size();i++)tractor.harvest(Field.getRows().get(i));
+        froilan.dismount(tractor);
         console.println("And another harvest is in.");
         dailyActivitiesEnd();
     }
