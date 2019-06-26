@@ -5,5 +5,5 @@ import com.zipcodewilmington.froilansfarm.Produce.CropRow;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 
 public interface Pilot extends Rider {
-    public void fertilize(CropDuster cd, CropRow<Crop> row);
+   // public void fertilize(CropDuster cd, CropRow<Crop> row);
 }

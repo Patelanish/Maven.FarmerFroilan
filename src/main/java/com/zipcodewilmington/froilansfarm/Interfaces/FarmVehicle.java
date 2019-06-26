@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
-public interface FarmVehicle<E extends Edible> {
+import com.zipcodewilmington.froilansfarm.Produce.CropRow;
 
-    E harvest(Produce produce);
-
+public interface FarmVehicle {
+    void harvest(CropRow row);
 }

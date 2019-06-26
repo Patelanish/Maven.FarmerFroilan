@@ -23,7 +23,7 @@ final public class Field {
         return rows;
     }
 
-    public static void addRow(CropRow<? extends Crop> row){
+    public static void addRow(CropRow row){
         rows.add(row);
     }
 

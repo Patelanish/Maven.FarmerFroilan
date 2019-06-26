@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Produce;
 
-public abstract class Crop {
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+
+public abstract class Crop implements Produce {
 }

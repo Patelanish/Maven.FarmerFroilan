@@ -42,18 +42,18 @@ public class Horse extends Animal implements Rideable {
     public boolean isMounted() {
         return isMounted;
     }
-    public void setIsMounted(boolean isMounted){
+    public void setIsMounted(Boolean isMounted){
         this.isMounted = isMounted;
     }
 
     public boolean isDismounted() {
-        return false;
+        return !this.isMounted;
     }
 
     public boolean isRidden() {
         return isRidden;
     }
-    public void setIsRidden(boolean isRidden){
+    public void setIsRidden(Boolean isRidden){
         this.isRidden = isRidden;
     }
 }

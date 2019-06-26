@@ -37,20 +37,16 @@ public class Froilanda extends Person implements Pilot {
     }
 
     public void mount(Rideable rideable) {
-
+        rideable.setIsMounted(true);
     }
 
     public void dismount(Rideable rideable) {
-
+        rideable.setIsMounted(false);
     }
 
     @Override
     public void ride(Rideable rideable) {
-
+        rideable.setIsRidden(true);
     }
 
-    @Override
-    public void fertilize(CropDuster cd, CropRow<Crop> row) {
-
-    }
 }
