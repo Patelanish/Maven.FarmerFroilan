@@ -94,6 +94,7 @@ public class WeeklySchedule {
         dailyActivitiesBegin();
         console.println("It's Monday. Let's prep the crop-duster!\nGood luck, Froilanda!");
         froilanda.mount(cropDuster);
+        cropDuster.fly();
         for(int i=0;i<Field.getRows().size();i++)cropDuster.fertilize(Field.getRows().get(i));
         froilanda.dismount(cropDuster);
         console.println("Whew, it's was touch & go, but the ole bucket of bolts made it through another day!" +
@@ -143,6 +144,7 @@ public class WeeklySchedule {
                 "Oh, there it is in the horse paddock, let's see...\n*clunk*\n" +
                 "... oops, I hope that wasn't important. Ok, off you go!");
         froilanda.mount(cropDuster);
+        cropDuster.fly();
         for(int i=0;i<Field.getRows().size();i++)cropDuster.fertilize(Field.getRows().get(i));
         froilanda.dismount(cropDuster);
         console.println("Froilanda, looks like you succeeded in dusting all the coops, in addition to the crops.\n"+
