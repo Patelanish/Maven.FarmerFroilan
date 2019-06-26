@@ -21,7 +21,7 @@ public abstract class Vehicle implements NoiseMaker, Rideable {
     }
 
     @Override
-    public boolean isRiden() {
+    public boolean isRidden() {
         return false;
     }
 }

@@ -16,10 +16,6 @@ public class Froilan extends Person implements Farmer {
     }
 
     @Override
-<<<<<<< HEAD
-    public boolean hasEaten() {
-        return false;
-=======
     public void setHasEatenFalse() {
         hasEaten=false;
     }
@@ -27,7 +23,6 @@ public class Froilan extends Person implements Farmer {
     @Override
     public boolean hasEaten() {
         return hasEaten;
->>>>>>> 60b6564124c04dfbd85498d913cc13c36c1a80b9
     }
 
     public void makeNoise() {
